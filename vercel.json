@@ -10,7 +10,15 @@
     },
     {
       "src": "api/index.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "backend/**",
+          "contracts/deployments/**",
+          "frontend/src/services/abis/**",
+          "contracts/artifacts/contracts/SoulboundNFT.sol/SoulboundNFT.json"
+        ]
+      }
     }
   ],
   "routes": [

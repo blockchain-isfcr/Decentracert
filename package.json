@@ -1,0 +1,11 @@
+{
+  "name": "decentracert-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "build": "echo 'root workspace build'"
+  }
+} 
