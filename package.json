@@ -6,6 +6,6 @@
     "backend"
   ],
   "scripts": {
-    "build": "echo 'root workspace build'"
+    "build": "cd frontend && npm run build"
   }
 } 
