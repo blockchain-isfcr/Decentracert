@@ -1,0 +1,227 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IIssuerRegistry",
+  "sourceName": "contracts/interfaces/IIssuerRegistry.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "issuer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum IIssuerRegistry.IssuerTier",
+          "name": "fromTier",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum IIssuerRegistry.IssuerTier",
+          "name": "toTier",
+          "type": "uint8"
+        }
+      ],
+      "name": "IssuerUpgraded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "issuer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum IIssuerRegistry.IssuerTier",
+          "name": "tier",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "IssuerVerified",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "issuer",
+          "type": "address"
+        }
+      ],
+      "name": "getIssuerData",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "issuerAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "enum IIssuerRegistry.IssuerTier",
+              "name": "tier",
+              "type": "uint8"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "verificationData",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "verifiedAt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isActive",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct IIssuerRegistry.IssuerData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "issuer",
+          "type": "address"
+        }
+      ],
+      "name": "getIssuerTier",
+      "outputs": [
+        {
+          "internalType": "enum IIssuerRegistry.IssuerTier",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "issuer",
+          "type": "address"
+        }
+      ],
+      "name": "isVerifiedIssuer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "issuerAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "issuerName",
+          "type": "string"
+        }
+      ],
+      "name": "manualVerifyIssuer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "domain",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "verificationData",
+          "type": "string"
+        }
+      ],
+      "name": "upgradeToT1",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "issuerName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "domain",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "verificationData",
+          "type": "string"
+        }
+      ],
+      "name": "verifyIssuerT1",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "issuerName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "socialMediaUrl",
+          "type": "string"
+        }
+      ],
+      "name": "verifyIssuerT2",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

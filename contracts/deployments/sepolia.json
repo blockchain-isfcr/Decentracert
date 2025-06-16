@@ -1,0 +1,7 @@
+{
+  "network": "sepolia",
+  "issuerRegistry": "0x415EF9b7687247F756eb2ee00D2F006C2A547500",
+  "soulboundNFT": "0xCA6e406f767d574E4Da524b44672b280B9913200",
+  "zkVerifier": "0x0E8c50a2B22738f04DD89888d91A486caD7cCcb7",
+  "timestamp": "2025-06-16T04:11:16.603Z"
+}

@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies (contracts)
+        run: |
+          cd contracts
+          npm ci
+      - name: Contracts linter
+        run: |
+          cd contracts
+          npm run lint
+      - name: Contracts tests + coverage
+        run: |
+          cd contracts
+          npm run coverage
+      - name: Install dependencies (frontend)
+        run: |
+          cd frontend
+          npm ci
+      - name: Frontend lint
+        run: |
+          cd frontend
+          npx eslint src --ext js,jsx
+      - name: Frontend build
+        run: |
+          cd frontend
+          npm run build 
