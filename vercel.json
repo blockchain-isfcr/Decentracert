@@ -17,10 +17,5 @@
     { "src": "/api/(.*)", "dest": "/api/index.js" },
     { "handle": "filesystem" },
     { "src": "(.*)", "dest": "/frontend/build$1" }
-  ],
-  "env": {
-    "PRIVATE_KEY": "@private_key",
-    "INFURA_API_KEY": "@infura_api_key",
-    "NETWORK": "sepolia"
-  }
+  ]
 } 
