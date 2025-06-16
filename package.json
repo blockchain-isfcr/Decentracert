@@ -6,6 +6,12 @@
     "backend"
   ],
   "scripts": {
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend ; npm run build",
+    "start:frontend": "cd frontend ; npm start",
+    "start:backend": "cd backend ; npm run dev",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
   }
 } 

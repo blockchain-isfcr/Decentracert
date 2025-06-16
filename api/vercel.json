@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/index.js": {
+      "includeFiles": [
+        "backend/**",
+        "contracts/deployments/**",
+        "frontend/src/services/abis/**",
+        "contracts/artifacts/contracts/SoulboundNFT.sol/SoulboundNFT.json"
+      ]
+    }
+  }
+} 
